@@ -16,7 +16,7 @@ public class Iterator_for_even_number implements Iterator {
 
         return numbers.length > index;
     }
-
+//////////1
     public Object next() {
 
         if ((numbers[index]) % 2 == 0) {
