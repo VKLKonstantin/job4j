@@ -10,20 +10,19 @@ public class Iterator_for_arrayTest {
         Iterator_for_array it = new Iterator_for_array(new int[][]{{1, 2}, {3, 4}});
 
         it.next();
-
+        it.next();
         int result = (Integer) it.next();
 
-        assertThat(result, is(3));
+        assertThat(result, is(4));
     }
 
     @Test
     public void checkNextPosition() {
         Iterator_for_array it = new Iterator_for_array(new int[][]{{1, 2}, {3, 4}});
 
-        it.next();
         boolean result = it.hasNext();
 
-        assertThat(result, is(false));
+        assertThat(result, is(true));
     }
 
 }
