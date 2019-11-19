@@ -5,7 +5,7 @@ public class Iterator_for_even_number implements Iterator {
 
     private int[] numbers;
     private int element;
-    private int index = 0;
+    private int index = -1;
 
     public Iterator_for_even_number(int[] numbers) {
         this.numbers = numbers;
@@ -18,14 +18,14 @@ public class Iterator_for_even_number implements Iterator {
     }
 
     public Object next() {
-
+        index++;
         if ((numbers[index]) % 2 == 0) {
-            element = numbers[index % 2];
+            element = numbers[index];
         } else {
             throw new NoSuchElementException();
 
         }
-        index++;
+
 
 
         return element;

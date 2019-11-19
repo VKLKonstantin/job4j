@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 
 public class Iterator_for_even_numberTest {
 
-/*
     @Test
     public void return_even_number() {
 
@@ -29,5 +28,5 @@ public class Iterator_for_even_numberTest {
 
         assertThat(result, is(3));
 
-    }*/
+    }
 }
