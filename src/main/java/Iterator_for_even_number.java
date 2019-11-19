@@ -5,7 +5,7 @@ public class Iterator_for_even_number implements Iterator {
 
     private int[] numbers;
     private int element;
-    private int index = -1;
+    private int index = 0;
 
     public Iterator_for_even_number(int[] numbers) {
         this.numbers = numbers;
@@ -25,9 +25,6 @@ public class Iterator_for_even_number implements Iterator {
             throw new NoSuchElementException();
 
         }
-
-
-
         return element;
 
     }
