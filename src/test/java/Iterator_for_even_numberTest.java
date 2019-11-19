@@ -7,25 +7,24 @@ public class Iterator_for_even_numberTest {
     @Test
     public void return_even_number() {
 
-        Iterator_for_even_number it = new Iterator_for_even_number(new int[]{2, 6, 3, 6});
+        Iterator_for_even_number it = new Iterator_for_even_number(new int[]{4, 2, 1, 1});
 
-        //it.next();
-      //  it.next();
+        it.next();
         int result = (Integer) it.next();
 
-        assertThat(result, is(6));
+        assertThat(result, is(2));
 
     }
+
     @Test
     public void check_hasNext() {
 
-        Iterator_for_even_number it = new Iterator_for_even_number(new int[]{2, 6, 3, 6});
+        Iterator_for_even_number it = new Iterator_for_even_number(new int[]{4, 2, 1, 1});
 
         it.next();
-        it.next();
-        int result = (Integer) it.next();
+        boolean result = it.hasNext();
 
-        assertThat(result, is(3));
+        assertThat(result, is(true));
 
     }
 }

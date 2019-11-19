@@ -15,6 +15,7 @@ public class Iterator_for_array implements Iterator {
 
 
     public boolean hasNext() {
+
         return column < value[row].length - 1&&row <= value.length - 1;
     }
 
