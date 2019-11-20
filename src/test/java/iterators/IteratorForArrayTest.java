@@ -1,13 +1,15 @@
+package iterators;
+
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.*;
 
-public class Iterator_for_arrayTest {
+public class IteratorForArrayTest {
 
     @Test
     public void whenGetNext() {
-        Iterator_for_array it = new Iterator_for_array(new int[][]{{1, 2}, {3, 4}});
+        IteratorForArray it = new IteratorForArray(new int[][]{{1, 2}, {3, 4}});
 
         it.next();
         it.next();
@@ -18,7 +20,7 @@ public class Iterator_for_arrayTest {
 
     @Test
     public void checkNextPosition() {
-        Iterator_for_array it = new Iterator_for_array(new int[][]{{1, 2}, {3, 4}});
+        IteratorForArray it = new IteratorForArray(new int[][]{{1, 2}, {3, 4}});
 
         boolean result = it.hasNext();
 
