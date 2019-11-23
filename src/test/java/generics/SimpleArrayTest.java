@@ -33,7 +33,6 @@ public class SimpleArrayTest {
 
         assertThat(result, is("second"));
     }
-
     /*   @Test
       public void deleteElement() {
           SimpleArray array = new SimpleArray(4);
