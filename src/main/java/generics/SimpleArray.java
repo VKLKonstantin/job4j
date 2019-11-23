@@ -1,5 +1,4 @@
 package generics;
-
 import java.util.Iterator;
 
 public class SimpleArray<T> implements Iterable<T> {
