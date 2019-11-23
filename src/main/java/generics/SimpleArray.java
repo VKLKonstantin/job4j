@@ -20,7 +20,7 @@ public class SimpleArray<T> implements Iterable<T> {
 
     public void remove(int index) {
         if (index <= objects.length - 1) {
-            for (int i = 0; i < objects.length-2; i++) {
+            for (int i = 0; i < objects.length - 2; i++) {
                 objects[index + 1 + i] = objects[index + i];
             }
         }
