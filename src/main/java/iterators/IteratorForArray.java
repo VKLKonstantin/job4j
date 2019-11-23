@@ -13,21 +13,21 @@ public class IteratorForArray implements Iterator {
     }
 
     public boolean hasNext() {
-        return column <= value[row].length - 1 && row <= value.length;
+        return column <= value[row].length - 1 && row <= value.length - 1;
     }
 
     public Object next() {
-        if (hasNext()) {
-            if (column == value[row].length - 1) {
-                row++;
-                column = 0;
-            } else {
-                column++;
-            }
-        } else if (!hasNext()) {
+        if (!hasNext()) {
             throw new NoSuchElementException();
         }
+        if (column == value[row].length - 1) {
+            row++;
+            column = 0;
+        } else {
+            column++;
+        }
         return value[row][column];
+
     }
 
     public void remove() {
