@@ -33,7 +33,7 @@ public class SimpleArrayTest {
 
         assertThat(result, is("second"));
     }
-    /*   @Test
+  /*     @Test
       public void deleteElement() {
           SimpleArray array = new SimpleArray(4);
           String d1 = "first";
@@ -46,10 +46,10 @@ public class SimpleArrayTest {
           array.add(d3);
           array.add(d4);
 
-          array.remove(2);
-          String result = (String) array.objects[1];
+          array.remove(1);
+          String result = (String) array.newArray[2];
 
-          assertThat(result, is("third"));
+          assertThat(result, is("second"));
       }*/
     @Test
     public void gettingElement() {
