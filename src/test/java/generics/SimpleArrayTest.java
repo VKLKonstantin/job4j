@@ -33,24 +33,26 @@ public class SimpleArrayTest {
 
         assertThat(result, is("second"));
     }
-  /*     @Test
-      public void deleteElement() {
-          SimpleArray array = new SimpleArray(4);
-          String d1 = "first";
-          String d2 = "second";
-          String d3 = "third";
-          String d4 = "fourth";
 
-          array.add(d1);
-          array.add(d2);
-          array.add(d3);
-          array.add(d4);
+    @Test
+    public void deleteElement() {
+        SimpleArray array = new SimpleArray(4);
+        String d1 = "first";
+        String d2 = "second";
+        String d3 = "third";
+        String d4 = "fourth";
 
-          array.remove(1);
-          String result = (String) array.newArray[2];
+        array.add(d1);
+        array.add(d2);
+        array.add(d3);
+        array.add(d4);
 
-          assertThat(result, is("second"));
-      }*/
+        array.remove(0);
+        String result = (String) array.get(0);
+
+        assertThat(result, is("second"));
+    }
+
     @Test
     public void gettingElement() {
         SimpleArray array = new SimpleArray(5);

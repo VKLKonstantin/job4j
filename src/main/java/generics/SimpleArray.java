@@ -4,13 +4,12 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class SimpleArray<T> implements Iterable<T> {
-    Object[] objects;
-    //Object[] newArray;
-    int index = 0;
-    int size;
+    public Object[] objects;
+    public int index = 0;
+
 
     public SimpleArray(int size) {
-        this.size = size;
+
         this.objects = new Object[size];
     }
 
@@ -19,31 +18,29 @@ public class SimpleArray<T> implements Iterable<T> {
     }
 
     public void set(int index, T model) {
-        if (index <= objects.length - 1 && objects[index] != null) {
+        if (index < this.index) {
             this.objects[index] = model;
         }
     }
 
-    /*public Object remove(int index) {
-        if (index <= objects.length - 1) {
-            newArray = new Object[size - 1];
-            objects[index] = objects[objects.length - 1];
-            *//*for(int i=0;i<objects.length;i++){
-                if(objects[i]==null){
-                    continue;
-                }
+    public T remove(int index) {
+        T res = null;
 
-                newArray[i]=objects[i];
-            }*//*
-            System.arraycopy(objects, 0, newArray, 0, size - 1);
+        if (index < this.index) {
+            res = (T) objects[index];
+            System.arraycopy(objects, index + 1, objects, index, this.index - 1 - index);
+            this.objects[--this.index] = null;
+
         }
-        return newArray;
-    }*/
+
+        return res;
+    }
 
     public T get(int position) {
 
         return (T) this.objects[position];
     }
+
     @Override
     public Iterator<T> iterator() {
 
@@ -57,7 +54,7 @@ public class SimpleArray<T> implements Iterable<T> {
             public T next() {
                 if (!hasNext()) {
                     throw new NoSuchElementException();
-                                    }
+                }
                 return (T) objects[index++];
             }
         };
