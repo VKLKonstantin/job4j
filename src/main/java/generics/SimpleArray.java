@@ -7,6 +7,9 @@ public class SimpleArray<T> implements Iterable<T> {
     public Object[] objects;
     public int index = 0;
 
+    public SimpleArray() {
+
+    }
 
     public SimpleArray(int size) {
 
