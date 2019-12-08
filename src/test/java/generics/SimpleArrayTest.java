@@ -48,9 +48,9 @@ public class SimpleArrayTest {
         array.add(d4);
 
         array.remove(0);
-        String result = (String) array.get(0);
+        String result = (String) array.get(1);
 
-        assertThat(result, is("second"));
+        assertThat(result, is("third"));
     }
 
     @Test

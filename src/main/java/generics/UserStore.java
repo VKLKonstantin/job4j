@@ -1,13 +1,17 @@
 package generics;
 
-public class UserStore implements Store<User> {
+public class UserStore extends Base implements Store<User> {
 
     private SimpleArray<User> users = new SimpleArray<>();
 
+    protected UserStore(String id) {
+        super(id);
+    }
 
 
     @Override
     public void add(User model) {
+
         users.add(model);
     }
 
@@ -16,9 +20,13 @@ public class UserStore implements Store<User> {
         return false;
     }
 
+
+    //непонятно, что должен делать метод delete? почему он должен возвращать boolean
     @Override
     public boolean delete(String id) {
-        return false;
+
+        return true;
+
     }
 
     @Override

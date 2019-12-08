@@ -5,14 +5,20 @@ import java.util.NoSuchElementException;
 
 public class SimpleArray<T> implements Iterable<T> {
     public Object[] objects;
-    public int index = 0;
+    private int index = 0;
+
+    public int getSize() {
+        return size;
+    }
+
+    private int size;
 
     public SimpleArray() {
 
     }
 
     public SimpleArray(int size) {
-
+        this.size = size;
         this.objects = new Object[size];
     }
 
@@ -31,8 +37,8 @@ public class SimpleArray<T> implements Iterable<T> {
 
         if (index < this.index) {
             res = (T) objects[index];
-            System.arraycopy(objects, index + 1, objects, index, this.index - 1 - index);
-            this.objects[--this.index] = null;
+            System.arraycopy(objects, index + 1, objects, index, size-1);
+            //this.objects[--this.index] = null;
 
         }
 
