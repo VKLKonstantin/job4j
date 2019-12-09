@@ -17,20 +17,21 @@ public class UserStore extends Base implements Store<User> {
 
     @Override
     public boolean replace(String id, User model) {
-        return false;
+        users.set((Integer.valueOf(id)), model);
+        return true;
     }
 
 
-    //непонятно, что должен делать метод delete? почему он должен возвращать boolean
     @Override
     public boolean delete(String id) {
-
+        users.remove(Integer.valueOf(id));
         return true;
 
     }
 
     @Override
     public User findById(String id) {
+        users.get(Integer.valueOf(id));
         return null;
     }
 }
