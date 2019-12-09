@@ -37,7 +37,7 @@ public class SimpleArray<T> implements Iterable<T> {
 
         if (index < this.index) {
             res = (T) objects[index];
-            System.arraycopy(objects, index + 1, objects, index, size-1);
+            System.arraycopy(objects, index + 1, objects, index, size - 1);
             //this.objects[--this.index] = null;
 
         }

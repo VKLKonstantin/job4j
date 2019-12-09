@@ -3,7 +3,7 @@ package list;
 import java.util.LinkedList;
 import java.util.List;
 
-public class SimpleArrayList <E>  {
+public class SimpleArrayList<E> {
     private int size;
     private Node<E> first;
 
