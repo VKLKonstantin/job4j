@@ -19,11 +19,20 @@ public class SimpleArrayListTest {
 
     @Test
     public void whenAddThreeElementsThenUseGetOneResultTwo() {
-        assertThat(list.get(1), is(2));
+        assertThat(list.get(0), is(3));
     }
 
     @Test
     public void whenAddThreeElementsThenUseGetSizeResultThree() {
         assertThat(list.getSize(), is(3));
     }
+
+    @Test
+    public void whenDeleteFirstElement() {
+        list.delete();
+
+        assertThat(list.get(1), is(1));
+
+    }
+
 }
