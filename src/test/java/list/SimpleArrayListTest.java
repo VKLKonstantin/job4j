@@ -31,7 +31,7 @@ public class SimpleArrayListTest {
     public void whenDeleteFirstElement() {
         list.delete();
 
-        assertThat(list.get(1), is(1));
+        assertThat(list.get(0), is(2));
 
     }
 
