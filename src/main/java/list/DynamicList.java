@@ -7,8 +7,7 @@ public class DynamicList<E> implements Iterable {
     private static int modCount = 0, expectedModCount;
 
     public static void main(String[] args) {
-        container = new Object[];
-
+       container = new Object[];
         Iterator<Object> iterator = container.iterator();
         expectedModCount = container.length;
         while (iterator.hasNext()) {
