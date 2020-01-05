@@ -2,7 +2,7 @@ package list;
 
 import java.util.*;
 
-public class DynamicList<E> implements Iterable {
+public class DynamicList<E> implements Iterable<E>{
     private static Object[] container;
     private static int modCount = 0, expectedModCount;
 
@@ -24,8 +24,20 @@ public class DynamicList<E> implements Iterable {
     }
 
     @Override
-    public Iterator iterator() {
-        return null;
+    public Iterator <E>iterator() {
+        return new Iterator<E>()
+        {
+            @Override
+            public boolean hasNext() {
+                return false;
+            }
+
+            @Override
+            public E next() {
+                return null;
+            }
+        };
+
     }
 
     public E get(int index) {
