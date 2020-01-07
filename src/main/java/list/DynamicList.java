@@ -3,13 +3,12 @@ package list;
 import java.util.*;
 
 public class DynamicList<E> implements Iterable<E>{
-    private static Object[] container;
+
     private static int modCount = 0, expectedModCount;
 
     public static void main(String[] args) {
-       container = new Object[];
-        Iterator<Object> iterator = container.iterator();
-        expectedModCount = container.length;
+      DynamicList <Integer> list = new DynamicList<>();
+      Iterator <Integer> iterator = list.iterator();
         while (iterator.hasNext()) {
             iterator.next();
             if (modCount != expectedModCount) {
@@ -18,11 +17,16 @@ public class DynamicList<E> implements Iterable<E>{
         }
     }
 
+   /* public E get(int index) {
+           E getting = (E) list[index];
+           return getting;
+       }
     public void add(E value) {
 
         modCount++;
-    }
+    }*/
 
+   
     @Override
     public Iterator <E>iterator() {
         return new Iterator<E>()
@@ -40,10 +44,7 @@ public class DynamicList<E> implements Iterable<E>{
 
     }
 
-    public E get(int index) {
-        E getting = (E) container[index];
-        return getting;
-    }
+
 }
 
 
