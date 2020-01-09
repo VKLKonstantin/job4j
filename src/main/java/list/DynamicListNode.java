@@ -4,8 +4,8 @@ package list;
 import java.util.ConcurrentModificationException;
 import java.util.Iterator;
 
-public class DynamicListNode<E> implements Iterable {
-    private int size;
+public class DynamicListNode<E>  {//implements Iterable
+    /*private int size;
     private Node<E> first;
     private static int expectedModCount = 0;
 
@@ -55,5 +55,5 @@ public class DynamicListNode<E> implements Iterable {
         public Node() {
 
         }
-    }
+    }*/
 }
