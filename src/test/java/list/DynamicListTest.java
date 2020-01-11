@@ -19,9 +19,9 @@ public class DynamicListTest<E> {
         list.add(s);
         list.add(s1);
         list.add(s2);
-        list.check();
 
-        int result = list.modCount - list.expectedModCount;
+
+        int result = list.container.length - list.expectedModCount;
 
         assertThat(result, is(0));
 
