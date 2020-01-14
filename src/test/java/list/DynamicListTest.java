@@ -21,7 +21,7 @@ public class DynamicListTest<E> {
         list.add(s2);
 
 
-        int result = list.container.length - list.expectedModCount;
+        int result = list.modCount - list.expectedModCount;
 
         assertThat(result, is(0));
 

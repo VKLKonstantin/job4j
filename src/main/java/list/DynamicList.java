@@ -21,8 +21,8 @@ public class DynamicList<E> implements Iterable<E> {
 
         while (iterator.hasNext()) {
             iterator.next();
-            expectedModCount++;
-            if (list.container.length!= expectedModCount) {
+
+            if (modCount != expectedModCount) {
                 new ConcurrentModificationException();
             }
         }
@@ -38,10 +38,10 @@ public class DynamicList<E> implements Iterable<E> {
     public void add(E value) {
         if (container.length < size) {
             this.container[index++] = value;
-           // modCount++;
+            modCount++;
         } else {
             System.arraycopy(container, 0, container, 0, size++);
-        //    modCount++;
+            modCount++;
         }
     }
 
@@ -61,9 +61,11 @@ public class DynamicList<E> implements Iterable<E> {
             @Override
             public E next() {
                 index++;
+                expectedModCount++;
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
+
                 return (E) container[index];
             }
         };
