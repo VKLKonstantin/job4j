@@ -4,8 +4,11 @@ import java.util.*;
 
 public class DynamicList<E> implements Iterable<E> {
 
-    public static int modCount = 0, index = 0, size, expectedModCount;
-    public static Object[] container;
+
+    public int index = 0;
+    public int size;
+    public static int expectedModCount,modCount=0;
+    public  Object[] container;
 
 
     public DynamicList(int size) {
@@ -61,7 +64,7 @@ public class DynamicList<E> implements Iterable<E> {
             @Override
             public E next() {
                 index++;
-                expectedModCount++;
+
                 if (!hasNext()) {
                     throw new NoSuchElementException();
                 }
