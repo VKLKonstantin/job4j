@@ -7,8 +7,8 @@ public class DynamicList<E> implements Iterable<E> {
 
     public int index = 0;
     public int size;
-    public static int expectedModCount,modCount=0;
-    public  Object[] container;
+    public static int expectedModCount, modCount = 0;
+    public Object[] container;
 
 
     public DynamicList(int size) {

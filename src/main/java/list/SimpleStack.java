@@ -1,5 +1,5 @@
 package list;
 
-public class SimpleStack <T>  {
+public class SimpleStack<T> {
 
 }
