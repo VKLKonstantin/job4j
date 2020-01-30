@@ -18,20 +18,20 @@ public class ModelUser {
         }
 
 
-
-   /*     @Override
+        @Override
         public int hashCode() {
             return Objects.hash(name, children, birthday);
-        }*/
-@Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
-        return children == user.children &&
-                Objects.equals(name, user.name) &&
-                Objects.equals(birthday, user.birthday);
-    }
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            User user = (User) o;
+            return children == user.children &&
+                    Objects.equals(name, user.name) &&
+                    Objects.equals(birthday, user.birthday);
+        }
 
     }
 
@@ -50,9 +50,5 @@ public class ModelUser {
 
     }
 
-//получаем два значения хэш-кода из-за того, что не переопределили метод equals, который проверяет,
-    //принадлежат ли ссылки одному объекту.
 
-    //2) при определении хэш-кода также получаем два значения хэш-кода, так хэш-функции у них будут одиннаковые
-    // из-за одинаковых полей, но equals разные
 }
