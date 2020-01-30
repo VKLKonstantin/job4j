@@ -19,11 +19,11 @@ public class ModelUser {
 
 
 
-        @Override
+   /*     @Override
         public int hashCode() {
             return Objects.hash(name, children, birthday);
-        }
-/*@Override
+        }*/
+@Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -31,7 +31,7 @@ public class ModelUser {
         return children == user.children &&
                 Objects.equals(name, user.name) &&
                 Objects.equals(birthday, user.birthday);
-    }*/
+    }
 
     }
 
