@@ -6,10 +6,9 @@ import java.util.*;
 
 public class ModelUser {
     public static final class User {
-        String name;
-        int children;
-
-        Calendar birthday;
+        public String name;
+        public int children;
+        public Calendar birthday;
 
         public User(String name, int children, Calendar birthday) {
             this.name = name;
